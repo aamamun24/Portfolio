@@ -1,6 +1,7 @@
 import { TypeAnimation } from 'react-type-animation';
 import myPhoto from '../../../../public/Mamun.png';
 import Container from '../../../components/Container';
+import Button from '../../../components/Button';
 
 const Banner = () => {
     return (
@@ -23,14 +24,12 @@ const Banner = () => {
                                         1000,
                                     ]}
                                     speed={50}
-                                    style={{ fontSize: '24px', color: '#FEA55F', fontWeight: 500 }}
+                                    style={{ fontSize: '24px', color: 'white', fontWeight: 500 }}
                                     repeat={Infinity}
                                 />
                             </div>
                             <a href="../../../../public/Resume of Abdullah Al Mamun.pdf" download="Resume of Mamun.pdf">
-                                <button className='green-pink-gradient py-4 px-6 text-white text-lg font-medium rounded-md'>
-                                    Download Resume
-                                </button>
+                                <Button text='Download Resume' />
                             </a>
                         </div>
                     </div>
