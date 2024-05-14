@@ -1,7 +1,9 @@
 import { TypeAnimation } from 'react-type-animation';
-import myPhoto from '../../../../public/Mamun.png';
 import Container from '../../../components/Container';
 import Button from '../../../components/Button';
+
+import myPhoto from '../../../assets/Mamun.png';
+import resume from '../../../assets/Resume of Abdullah Al Mamun.pdf'
 
 const Banner = () => {
     return (
@@ -14,7 +16,7 @@ const Banner = () => {
                             <div className='w-1 h-40 sm:h-80 violet-gradient' />
                         </div>
                         <div className='mt-5'>
-                            <h1 className='font-bold text-2xl md:text-5xl text-white'>Hi, I'm <span className='text-[#915eff]'>Abdullah Al Mamun</span></h1>
+                            <h1 className='font-bold text-2xl md:text-5xl text-white'>Hi, I&apos;m <span className='text-[#915eff]'>Abdullah Al Mamun</span></h1>
                             <div className='my-4'>
                                 <TypeAnimation
                                     sequence={[
@@ -28,7 +30,7 @@ const Banner = () => {
                                     repeat={Infinity}
                                 />
                             </div>
-                            <a href="../../../../public/Resume of Abdullah Al Mamun.pdf" download="Resume of Mamun.pdf">
+                            <a href={resume} download="Resume of Mamun.pdf">
                                 <Button text='Download Resume' />
                             </a>
                         </div>

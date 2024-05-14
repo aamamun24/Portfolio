@@ -1,49 +1,127 @@
-import Container from "../../../components/Container";
-import { Link } from "react-scroll";
 import { useState } from "react";
+import { Link } from "react-scroll";
+
+import { styles } from "../../../styles"
+import logo from "../../../assets/logo.png"
+
+import { MdClose, MdMenu } from "react-icons/md";
 
 const Navbar = () => {
 
-
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    };
-
+    const [active, setActive] = useState('hero')
+    const [toggle, setToggle] = useState(true)
 
     const navLinks = <>
-        <li><Link to="hero" spy={true} smooth={true} duration={500} className='text-lg pb-1 hover:border-b-2 border-[#FEA55F] cursor-pointer'>Home</Link></li>
-        <li><Link to="about" spy={true} smooth={true} duration={500} className='text-lg pb-1 hover:border-b-2 border-[#FEA55F] cursor-pointer'>About</Link></li>
-        <li><Link to="skills" spy={true} smooth={true} duration={500} className='text-lg pb-1 hover:border-b-2 border-[#FEA55F] cursor-pointer'>Skills</Link></li>
-        <li><Link to="project" spy={true} smooth={true} duration={500} className='text-lg pb-1 hover:border-b-2 border-[#FEA55F] cursor-pointer'>Project</Link></li>
-        <li><Link to="education" spy={true} smooth={true} duration={500} className='text-lg pb-1 hover:border-b-2 border-[#FEA55F] cursor-pointer'>Education</Link></li>
-        <li><Link to="contact" spy={true} smooth={true} duration={500} className='text-lg pb-1 hover:border-b-2 border-[#FEA55F] cursor-pointer'>Contact</Link></li>
+        <li>
+            <Link
+                to="hero"
+                spy={true}
+                smooth={true}
+                duration={500}
+                className={`${active === 'hero' ? 'text-white' : 'text-secondary'} font-poppins font-medium cursor-pointer`}
+                onClick={() => setActive('hero')}
+            >
+                Home
+            </Link>
+        </li>
+        <li>
+            <Link
+                to="about"
+                spy={true}
+                smooth={true}
+                duration={500}
+                className={`${active === 'about' ? 'text-white' : 'text-secondary'} font-poppins font-medium cursor-pointer`}
+                onClick={() => setActive('about')}
+            >
+                About
+            </Link>
+        </li>
+        <li>
+            <Link
+                to="skills"
+                spy={true}
+                smooth={true}
+                duration={500}
+                className={`${active === 'skills' ? 'text-white' : 'text-secondary'} font-poppins font-medium cursor-pointer`}
+                onClick={() => setActive('skills')}
+            >
+                Skills
+            </Link>
+        </li>
+        <li>
+            <Link
+                to="project"
+                spy={true}
+                smooth={true}
+                duration={500}
+                className={`${active === 'project' ? 'text-white' : 'text-secondary'} font-poppins font-medium cursor-pointer`}
+                onClick={() => setActive('project')}
+            >
+                Project
+            </Link>
+        </li>
+        <li>
+            <Link
+                to="education"
+                spy={true}
+                smooth={true}
+                duration={500}
+                className={`${active === 'education' ? 'text-white' : 'text-secondary'} font-poppins font-medium cursor-pointer`}
+                onClick={() => setActive('education')}
+            >
+                Education
+            </Link>
+        </li>
+        <li>
+            <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                duration={500}
+                className={`${active === 'contact' ? 'text-white' : 'text-secondary'} font-poppins font-medium cursor-pointer`}
+                onClick={() => setActive('contact')}
+            >
+                Contact
+            </Link>
+        </li>
     </>
 
     return (
-        <div className="fixed w-full bg-[#011221] bg-opacity-25">
-            <Container>
-                <div className="flex items-center justify-between">
-                    <Link to='hero' spy={true} smooth={true} duration={500} className="text-[#FF6464] text-4xl font-bold cursor-pointer">Mamun</Link>
+        <nav className={`${styles.paddingX} w-full z-20 flex items-center py-5 fixed top-0 bg-primary`}>
+            <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
+                <Link
+                    to='/'
+                    className='flex items-center gap-2'
+                    onClick={() => {
+                        setActive('');
+                        window.scrollTo(0, 0)
+                    }}
+                >
+                    <img src={logo} alt="logo" className='w-8 h-8 object-contain' />
+                    <p className='text-white text-lg font-bold cursor-pointer flex'>Mamun&nbsp;<span className='lg:block hidden'>| Web Developer</span></p>
+                </Link>
 
-                    {/* medium screen */}
-                    <ul className="hidden md:flex gap-6 text-white py-4">
-                        {navLinks}
-                    </ul>
+                {/* medium screen */}
+                <ul className='list-none hidden sm:flex flex-row sm:gap-6 lg:gap-10'>
+                    {navLinks}
+                </ul>
 
-                    {/* responsive for small devices */}
-                    <div className="md:hidden">
-                        <p onClick={toggleMenu} className="text-3xl text-white">Pmenu</p>
-                        {isOpen && (
-                            <ul className="absolute top-0 right-0 mt-12 bg-[#11071F] rounded-md p-4">
-                                {navLinks}
-                            </ul>
-                        )}
+                {/* small screen */}
+                <div className='sm:hidden flex flex-1 justify-end items-center'>
+                    <p
+                        className='text-white text-2xl font-bold cursor-pointer'
+                        onClick={() => { setToggle(!toggle) }}
+                    >
+                        {toggle ? <MdMenu /> : <MdClose />}
+                    </p>
+                    <div className={`${toggle ? 'hidden' : 'flex'} p-6 black-gradient absolute top-16 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
+                        <ul className='list-none flex justify-end items-start flex-col gap-4'>
+                            {navLinks}
+                        </ul>
                     </div>
                 </div>
-            </Container>
-        </div>
+            </div>
+        </nav>
     );
 };
 

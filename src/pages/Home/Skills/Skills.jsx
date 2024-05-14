@@ -7,7 +7,7 @@ import SkillCanvas from './SkillCanvas';
 
 const Skills = () => {
     return (
-        <section className="my-10 ">
+        <section className="my-10" id='skills'>
             <Container>
                 <motion.div variants={textVariant()}>
                     <SectionTitle title='Skills.' />

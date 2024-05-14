@@ -7,19 +7,19 @@ import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
     return (
-        <div id="projects">
+        <section id="project">
             <Container>
                 <motion.div variants={textVariant()}>
                     <SectionTitle title='Project.' />
                 </motion.div>
 
-                <div className="mt-10 flex flex-col sm:flex-row justify-evenly gap-6">
+                <div className="mt-10 flex flex-wrap gap-6">
                     {projects.map((project, index) => (
                         <ProjectCard key={`project-${index}`} index={index} {...project} />
                     ))}
                 </div>
             </Container>
-        </div>
+        </section>
     );
 };
 

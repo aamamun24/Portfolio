@@ -1,5 +1,5 @@
 import { Link } from 'react-scroll';
-import myPhoto from '../../../../public/Mamun.png';
+import myPhoto from '../../../assets/Mamun.png';
 import Container from '../../../components/Container';
 import SectionTitle from '../../../components/SectionTitle';
 import { fadeIn, textVariant } from '../../../utils/motion';

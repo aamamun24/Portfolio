@@ -3,7 +3,7 @@ import { Tilt } from "react-tilt"
 import { github } from "../../../assets"
 import { fadeIn } from "../../../utils/motion"
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
+const ProjectCard = ({ index, name, description, tags, image, source_code_link, live_link }) => {
     return (
         <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
             <Tilt
@@ -29,18 +29,19 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
                     <div className="flex justify-between">
                         <h3 className="text-white text-2xl font-bold">{name}</h3>
                         <button
-                            onClick={() => window.open(source_code_link, '_blank')}
+                            onClick={() => window.open(live_link, '_blank')}
                             className="violet-gradient text-white text-sm font-medium py-1 px-3 rounded-md"
                         >Visit</button>
                     </div>
                     <p className="text-secondary text-sm text-justify mt-2">{description}</p>
                 </div>
 
-                <div className="mt-4 flex flex-wrap gap-2">
+                {/* TODO */}
+                {/* <div className="mt-4 flex flex-wrap gap-2">
                     {tags.map(tag => (
                         <p key={tag.name} className={`${tag.color} text-sm`}>{tag.name}</p>
                     ))}
-                </div>
+                </div> */}
             </Tilt>
         </motion.div>
     )

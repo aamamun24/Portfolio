@@ -16,9 +16,9 @@ import {
     starbucks,
     tesla,
     shopify,
-    carrent,
-    jobit,
-    tripguide,
+    techpulse,
+    skillcanvas,
+    foodbond,
     express,
     firebase
 } from "../assets";
@@ -162,9 +162,9 @@ const experiences = [
 
 const projects = [
     {
-        name: "Car Rent",
+        name: "Skill Canvas Hub",
         description:
-            "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+            "This project is an online education website built using the MERN (MongoDB, Express.js, React.js, Node.js) stack. It provides a platform for students and instructors to interact, access course content, and participate in online learning.",
         tags: [
             {
                 name: "react",
@@ -179,13 +179,14 @@ const projects = [
                 color: "pink-text-gradient",
             },
         ],
-        image: carrent,
-        source_code_link: "https://github.com/",
+        image: skillcanvas,
+        source_code_link: "https://github.com/aamamun24/skill-canvas-hub-client",
+        live_link: "https://skillcanvashub.web.app/",
     },
     {
-        name: "Job IT",
+        name: "Food Bond",
         description:
-            "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+            "Food Bond, a community-driven website designed to connect food enthusiasts and promote the joy of sharing delicious meals!",
         tags: [
             {
                 name: "react",
@@ -200,13 +201,14 @@ const projects = [
                 color: "pink-text-gradient",
             },
         ],
-        image: jobit,
-        source_code_link: "https://github.com/",
+        image: foodbond,
+        source_code_link: "https://github.com/aamamun24/food-bond-client",
+        live_link: "https://food-bond.web.app/",
     },
     {
-        name: "Trip Guide",
+        name: "Tech Pulse",
         description:
-            "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+            "Tech Pulse is an innovative tech e-commerce website offering a seamless shopping experience for all your gadget needs.",
         tags: [
             {
                 name: "nextjs",
@@ -221,8 +223,9 @@ const projects = [
                 color: "pink-text-gradient",
             },
         ],
-        image: tripguide,
-        source_code_link: "https://github.com/",
+        image: techpulse,
+        source_code_link: "https://github.com/aamamun24/tech-pulse-client",
+        live_link: "https://tech-pulses.web.app/",
     },
 ];
 
