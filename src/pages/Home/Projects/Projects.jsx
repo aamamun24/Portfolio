@@ -1,6 +1,6 @@
 import Container from "../../../components/Container";
 import { motion } from "framer-motion";
-import { fadeIn, textVariant } from "../../../utils/motion";
+import { textVariant } from "../../../utils/motion";
 import SectionTitle from "../../../components/SectionTitle";
 import { projects } from "../../../constants";
 import ProjectCard from "./ProjectCard";
@@ -10,10 +10,10 @@ const Projects = () => {
         <section id="project">
             <Container>
                 <motion.div variants={textVariant()}>
-                    <SectionTitle title='Project.' />
+                    <SectionTitle title='Projects.' />
                 </motion.div>
 
-                <div className="mt-10 flex flex-wrap gap-6">
+                <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {projects.map((project, index) => (
                         <ProjectCard key={`project-${index}`} index={index} {...project} />
                     ))}

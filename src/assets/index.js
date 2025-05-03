@@ -17,6 +17,8 @@ import nodejs from "./skills/nodejs.png";
 import reactjs from "./skills/reactjs.png";
 import firebase from "./skills/firebase.png";
 import tailwind from "./skills/tailwind.png";
+import nextjs from "./skills/nextjs.png";
+import typescript from "./skills/typescript.png";
 import express from "./skills/expressjs-icon.svg";
 
 import meta from "./company/meta.png";
@@ -55,4 +57,6 @@ export {
   techpulse,
   skillcanvas,
   foodbond,
+  nextjs,
+  typescript,
 };

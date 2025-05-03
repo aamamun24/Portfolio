@@ -20,7 +20,9 @@ import {
     skillcanvas,
     foodbond,
     express,
-    firebase
+    firebase,
+    nextjs,
+    typescript,
 } from "../assets";
 
 export const navLinks = [
@@ -89,6 +91,14 @@ const technologies = [
     {
         name: "Express",
         icon: express,
+    },
+    {
+        name: "Next JS",
+        icon: nextjs,
+    },
+    {
+        name: "Typescript",
+        icon: typescript,
     },
     {
         name: "Firebase",
@@ -175,7 +185,7 @@ const projects = [
                 color: "green-text-gradient",
             },
             {
-                name: "tailwind",
+                name: "express",
                 color: "pink-text-gradient",
             },
         ],
@@ -197,7 +207,7 @@ const projects = [
                 color: "green-text-gradient",
             },
             {
-                name: "scss",
+                name: "firebase",
                 color: "pink-text-gradient",
             },
         ],
@@ -211,15 +221,15 @@ const projects = [
             "Tech Pulse is an innovative tech e-commerce website offering a seamless shopping experience for all your gadget needs.",
         tags: [
             {
-                name: "nextjs",
+                name: "react",
                 color: "blue-text-gradient",
             },
             {
-                name: "supabase",
+                name: "tailwind",
                 color: "green-text-gradient",
             },
             {
-                name: "css",
+                name: "firebase",
                 color: "pink-text-gradient",
             },
         ],

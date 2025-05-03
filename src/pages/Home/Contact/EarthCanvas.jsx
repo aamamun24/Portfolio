@@ -1,6 +1,6 @@
+import { Suspense } from "react"
 import { Canvas } from "@react-three/fiber"
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei"
-import { Suspense } from "react"
 
 const EarthCanvas = () => {
     return (
@@ -31,8 +31,7 @@ const EarthCanvas = () => {
 }
 
 const Earth = () => {
-    const earth = useGLTF('../../../public/planet/scene.gltf')
-
+    const earth = useGLTF('/planet/scene.gltf'); // Ensure the file is in the public/planet directory
     return (
         <primitive
             object={earth.scene}
@@ -40,7 +39,7 @@ const Earth = () => {
             position-y={0}
             rotation-y={0}
         />
-    )
-}
+    );
+};
 
 export default EarthCanvas;

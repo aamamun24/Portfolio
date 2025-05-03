@@ -1,39 +1,41 @@
-import { Link } from 'react-scroll';
-import myPhoto from '../../../assets/Mamun.png';
-import Container from '../../../components/Container';
-import SectionTitle from '../../../components/SectionTitle';
-import { fadeIn, textVariant } from '../../../utils/motion';
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
+import { fadeIn } from "../../../utils/motion";
+import EarthCanvas from "../Contact/EarthCanvas";
+import Container from "../../../components/Container";
+import SectionTitle from "../../../components/SectionTitle";
 
 const About = () => {
     return (
-        <div className='' id="about">
+        <section id="about" className="relative">
             <Container>
-                <motion.div variants={textVariant()}>
-                    <SectionTitle title='About Me.' />
-                </motion.div>
+                <SectionTitle title={"About Me."} />
 
-                <div className='flex flex-col md:flex-row-reverse gap-6 justify-between items-center'>
-                    <div className='flex-1'>
-                        <motion.p
-                            variants={fadeIn('', '', 0.1, 1)}
-                            className='mt-4 text-secondary max-w-3xl leading-8'
-                        >
-                            Greetings! I'm a motivated MERN stack enthusiast dedicated to shaping the digital landscape. Fueled by a passion for creating dynamic and user-friendly web applications, I thrive on challenges and continuous learning. Let's collaborate and bring innovative ideas to life!
-                        </motion.p>
-                        <Link to="contact" spy={true} smooth={true} duration={500}>
-                            <button className='bg-[#FF6464] py-2 px-4 text-lg text-white mt-5 font-medium rounded-full'>
-                                Contact
-                            </button>
-                        </Link>
-                    </div>
+                <div className="mt-5 flex flex-col-reverse lg:flex-row items-center gap-10">
+                    {/* Left Section: Text */}
+                    <motion.div
+                        variants={fadeIn("left", "spring", 0.5, 0.75)}
+                        className="lg:w-1/2 text-secondary text-lg leading-relaxed"
+                    >
+                        <p>
+                            Hi, I'm <span className="text-white font-bold">Abdullah Al Mamun</span>, a passionate developer with a love for creating
+                            beautiful and functional web applications. I specialize in modern web technologies like Next JS, Express, Mongoose, Node JS, Tailwind CSS. My goal is to deliver exceptional user experiences through clean and efficient code.
+                        </p>
+                        <p className="mt-4">
+                            When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and sharing my
+                            knowledge with the developer community.
+                        </p>
+                    </motion.div>
 
-                    <div className='flex-1'>
-                        <img className='' src={myPhoto} alt="Photo of Mamun" />
-                    </div>
+                    {/* Right Section */}
+                    <motion.div
+                        variants={fadeIn("right", "spring", 0.5, 0.75)}
+                        className="lg:w-1/2 h-[400px]"
+                    >
+                        <EarthCanvas />
+                    </motion.div>
                 </div>
             </Container>
-        </div>
+        </section>
     );
 };
 
