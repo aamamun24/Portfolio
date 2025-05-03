@@ -6,7 +6,7 @@ const Footer = () => {
         <footer className="bg-black py-6">
             <Container>
                 <div className="flex gap-4 items-center justify-center">
-                    <a href="https://www.facebook.com/aamamun.360"><FaFacebookF className="text-5xl text-white p-3 border border-gray-500 hover:border-white rounded-full"></FaFacebookF></a>
+                    <a href="https://www.facebook.com/aamamun24"><FaFacebookF className="text-5xl text-white p-3 border border-gray-500 hover:border-white rounded-full"></FaFacebookF></a>
                     <a href="https://github.com/aamamun24"><FaGithub className="text-5xl text-white p-3 border border-gray-500 hover:border-white rounded-full"></FaGithub></a>
                     <a href="https://www.linkedin.com/in/aamamun24/"><FaLinkedin className="text-5xl text-white p-3 border border-gray-500 hover:border-white rounded-full"></FaLinkedin ></a>
                 </div>
