@@ -5,7 +5,7 @@ import SectionTitle from "../../../components/SectionTitle";
 
 const Education = () => {
     return (
-        <section id="education" className="relative py-12">
+        <section id="education" className="mt-16">
             <Container>
                 <SectionTitle title={"Education."} />
 

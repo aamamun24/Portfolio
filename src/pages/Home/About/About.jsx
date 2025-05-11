@@ -6,11 +6,11 @@ import SectionTitle from "../../../components/SectionTitle";
 
 const About = () => {
     return (
-        <section id="about" className="relative">
+        <section id="about" className="relative mt-16">
             <Container>
                 <SectionTitle title={"About Me."} />
 
-                <div className="mt-5 flex flex-col-reverse lg:flex-row items-center gap-10">
+                <div className="flex flex-col-reverse lg:flex-row items-center gap-10">
                     {/* Left Section: Text */}
                     <motion.div
                         variants={fadeIn("left", "spring", 0.5, 0.75)}

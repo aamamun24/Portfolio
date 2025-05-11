@@ -50,7 +50,7 @@ const Contact = () => {
     };
 
     return (
-        <div id="contact" className="relative py-8">
+        <div id="contact" className="mt-16 py-8">
             <Container>
                 <SectionTitle title={"Contact."} />
                 <div className="mt-8 flex flex-col lg:flex-row justify-between gap-10">

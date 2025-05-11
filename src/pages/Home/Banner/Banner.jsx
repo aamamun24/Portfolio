@@ -2,15 +2,15 @@ import { TypeAnimation } from 'react-type-animation';
 import Container from '../../../components/Container';
 import Button from '../../../components/Button';
 
-import myPhoto from '../../../assets/Mamun.png';
+import myPhoto from '../../../assets/hero-pic.png';
 import resume from '../../../assets/Resume of Abdullah Al Mamun.pdf'
 
 const Banner = () => {
     return (
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center min-h-screen" id='hero'>
+        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center min-h-fit" id='hero'>
             <Container>
                 <div className="flex flex-col sm:flex-row gap-6 justify-between items-center pt-20">
-                    <div className='flex flex-row gap-5 flex-1'>
+                    <div className='flex flex-row gap-5 lg:flex-2'>
                         <div className='flex flex-col items-center mt-5'>
                             <div className='w-5 h-5 rounded-full bg-[#915eff]' />
                             <div className='w-1 h-40 sm:h-80 violet-gradient' />
@@ -36,8 +36,8 @@ const Banner = () => {
                         </div>
                     </div>
 
-                    <div className='flex-1'>
-                        <img className='' src={myPhoto} alt="Photo of Mamun" />
+                    <div className='lg:flex-1'>
+                        <img className='w-[300px] md:w-[350px] lg:w-[400px] mx-auto' src={myPhoto} alt="Photo of Mamun" />
                     </div>
                 </div>
             </Container>
